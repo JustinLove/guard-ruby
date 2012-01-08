@@ -16,8 +16,13 @@ Gem::Specification.new do |s|
 
   s.rubyforge_project = "guard-ruby"
 
-  s.files         = `git ls-files`.split("\n")
+  s.files         = <<MANIFEST.split("\n")
+lib/guard/ruby/templates/Guardfile
+lib/guard/ruby.rb
+MANIFEST
   s.require_paths = ["lib"]
 
   s.add_runtime_dependency "guard"
+
+  s.add_development_dependency "mast"
 end

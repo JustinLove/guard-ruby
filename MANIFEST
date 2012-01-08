@@ -1,0 +1,3 @@
+#!mast -x *gemspec -x Gemfile* -x Rakefile *
+lib/guard/ruby/templates/Guardfile
+lib/guard/ruby.rb
