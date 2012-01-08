@@ -2,11 +2,11 @@ require 'guard'
 require 'guard/guard'
 
 module Guard
-  module Ruby < Guard
+  class Ruby < Guard
     VERSION = "0.0.1"
 
     def start
-      run_all
+      run_all if options[:all_on_start]
     end
 
     def run_all
@@ -15,5 +15,6 @@ module Guard
 
     def run_on_change(paths)
       paths.each {|path| system("ruby #{path}")}
+    end
   end
 end
