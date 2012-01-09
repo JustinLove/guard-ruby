@@ -19,6 +19,7 @@ Gem::Specification.new do |s|
   s.files         = <<MANIFEST.split("\n")
 lib/guard/ruby/templates/Guardfile
 lib/guard/ruby.rb
+Readme.md
 MANIFEST
   s.require_paths = ["lib"]
 
