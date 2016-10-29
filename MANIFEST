@@ -1,4 +1,6 @@
 #!mast -x *gemspec -x Gemfile* -x Rakefile -x pkg *
+CHANGELOG.md
 lib/guard/ruby/templates/Guardfile
+lib/guard/ruby/version.rb
 lib/guard/ruby.rb
 Readme.md

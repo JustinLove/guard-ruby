@@ -1,10 +1,10 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "guard/ruby"
+require "guard/ruby/version"
 
 Gem::Specification.new do |s|
   s.name        = "guard-ruby"
-  s.version     = Guard::Ruby::VERSION
+  s.version     = Guard::GUARD_RUBY_VERSION
   s.authors     = ["Justin Love"]
   s.email       = ["git@JustinLove.name"]
   s.homepage    = ""
@@ -17,13 +17,16 @@ Gem::Specification.new do |s|
   s.rubyforge_project = "guard-ruby"
 
   s.files         = <<MANIFEST.split("\n")
+CHANGELOG.md
 lib/guard/ruby/templates/Guardfile
+lib/guard/ruby/version.rb
 lib/guard/ruby.rb
 Readme.md
 MANIFEST
   s.require_paths = ["lib"]
 
-  s.add_runtime_dependency "guard"
+  s.add_runtime_dependency "guard", '~> 2.0'
+  s.add_runtime_dependency 'guard-compat', '~> 1.1'
 
   s.add_development_dependency "mast"
 end
